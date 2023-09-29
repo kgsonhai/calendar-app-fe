@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+.calendar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.day-container {
+  width: 200px;
+  background: #f3f5f8;
+  padding: 5px 10px 20px 10px;
+  margin: 0px 5px;
+  border-radius: 10px;
+  height: 400px;
+  overflow: scroll;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.day-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.day-of-week {
+  color: #6a7988;
+  font-family: Open Sans;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.day-of-month {
+  font-family: Open Sans;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0px;
+  text-align: left;
+  font-weight: bold;
+  color: #728096;
+}
+
+.today {
+  color: #5a57cb;
+}
+
+.workout-container {
+  background-color: #ffffffcc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #22242626;
+  border-radius: 6px;
+}
+
+.workout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.workout-header__icon,
+.add-new-workout {
+  display: flex;
+  cursor: pointer;
+}
+
+.workout-name {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0px;
+  text-align: left;
+  max-width: 70%;
+  color: #5a57cb;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Open Sans;
+  text-transform: uppercase;
+}
+
+.exercise-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.exercise-infor {
+  width: 70%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: right;
 }
 
-.App-link {
-  color: #61dafb;
+.exercise-infor .exercise-name,
+.sets {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.exercise-name {
+  font-size: 13px;
+}
+
+.sets {
+  font-weight: normal;
+  font-size: 10px;
+  color: #95a6b7;
+}
+
+.number-of-sets {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-size: 10px;
+  font-weight: 500;
+  color: #919cad;
+}
+
+.workout-wrapper {
+  margin-top: 10px;
+}
+
+.exercise-wrapper {
+  cursor: move;
+  margin-bottom: 5px;
+  padding: 8px;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+}
+
+.add-new-exercise {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
 }
